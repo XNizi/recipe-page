@@ -1,0 +1,165 @@
+@use './reset' as *;
+@use './variables' as *;
+html {
+	font-size: 62.5%;
+}
+body {
+	position: relative;
+	font-family: 'Outfit', sans-serif;
+	background-color: $eggshell;
+	min-height: 100vh;
+}
+.card {
+	display: flex;
+	flex-direction: column;
+	background-color: $white;
+	max-width: 736px;
+
+	&__body {
+		padding: 40px 32px;
+	}
+
+	&__title {
+		&-heading {
+			font-family: 'Young Serif', serif;
+			font-size: 3.6rem;
+			font-weight: normal;
+			margin-bottom: 24px;
+			color: $darkCharcoal;
+		}
+		&-basicText {
+			font-size: $regular;
+			color: $wengeBrown;
+		}
+	}
+	&__heading {
+		font-size: $headingM;
+		font-family: 'Young Serif', serif;
+		font-weight: normal;
+		color: $nutmeg;
+		margin-bottom: 24px;
+	}
+	&__preparation {
+		background-color: $roseWhite;
+		margin: 32px 0;
+		padding: 24px;
+		border-radius: 12px;
+		&-heading {
+			font-size: $headingS;
+			color: $darkRaspberry;
+			font-weight: 600;
+			margin-bottom: 16px;
+		}
+		&-list {
+			list-style: disc;
+			list-style-position: inside;
+		}
+		&-item {
+			margin-left: 8px;
+			font-size: $regular;
+			color: $wengeBrown;
+			&::marker {
+				color: $darkRaspberry;
+			}
+			span {
+				font-weight: bold;
+			}
+		}
+	}
+	&__ingredients {
+		&-list {
+			list-style: disc;
+			list-style-position: inside;
+		}
+		&-item {
+			margin-left: 8px;
+			font-size: $regular;
+			color: $wengeBrown;
+			padding-left: 20px;
+			text-indent: -22px;
+			&::marker {
+				color: $darkRaspberry;
+			}
+		}
+	}
+	hr {
+		margin: 32px 0;
+		height: 1px;
+		background-color: $lightGrey;
+		border: none;
+	}
+	&__instructions {
+		&-list {
+			list-style-position: inside;
+		}
+		&-item {
+			font-size: $regular;
+			margin-bottom: 8px;
+			color: $wengeBrown;
+			&::marker {
+				color: $darkRaspberry;
+				font-weight: bold;
+			}
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+			span {
+				font-weight: bold;
+			}
+		}
+	}
+	&__nutritionBox {
+		width: 100%;
+		border-collapse: collapse;
+
+		tr {
+			font-size: $regular;
+
+			border-bottom: 1px solid $lightGrey;
+			td:first-child {
+				padding-top: 12px;
+				padding-bottom: 12px;
+				padding-left: 32px;
+				color: $wengeBrown;
+			}
+			td:last-child {
+				padding-top: 12px;
+				padding-bottom: 12px;
+				padding-right: 32px;
+				color: $nutmeg;
+				font-weight: bold;
+			}
+			&:last-of-type {
+				border: none;
+			}
+		}
+	}
+	&__nutrition-basicText {
+		margin: 24px 0;
+	}
+}
+@media (min-width: 736px) {
+	body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 124px 0;
+	}
+	.card {
+		border-radius: 24px;
+		padding: 40px;
+		&__body {
+			padding-top: 40px;
+			padding-bottom: 0;
+			padding-left: 0;
+			padding-right: 0;
+		}
+		&__img {
+			border-radius: 12px;
+		}
+		&__title-heading {
+			font-size: $headingL;
+		}
+	}
+}
